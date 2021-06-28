@@ -8,7 +8,10 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Typing Test</title>
     <style>
-    
+    <style>
+/* Button Dark Mode */ 
+.modedark{display:inline-block;float: right;margin-top: 3px;position:absolute;right:45px;top: 0;z-index:999;} .modedark svg{ width:24px; height:24px; vertical-align: -5px; background-repeat: no-repeat !important; content: ''; } .modedark svg path{ fill:#fff; } .modedark .check:checked ~ .NavMenu{ opacity:1; visibility:visible; top:45px; min-width:200px; transition:all .3s ease; z-index:2; } .iconmode { cursor: pointer; display: block; padding: 8px; background-position: center; transition: all .5s linear; } .iconmode:hover{ border-radius: 100px; background: rgba(0,0,0,.2) radial-gradient(circle, transparent 2%, rgba(0,0,0,.2) 2%) center/15000%; } .check { display: none; } .modedark .iconmode .openmode{ display:block; } .modedark .iconmode .closemode{ display:none; } .modedark .check:checked ~ .iconmode .openmode{ display:none; } .modedark .check:checked ~ .iconmode .closemode{ display:block; }.Night {background: #353535;}
+</style>
     </style>
   </head>
   <body>
@@ -204,6 +207,12 @@
     ad.dropFiles(document,         handleFiles, { acceptedTypes: [pdfMime, pngMime] });
 
 })();
+
+<script type='text/javascript'>
+//<![CDATA[
+$(document).ready(function(){$("body").toggleClass(localStorage.toggled),$("#modedark").on("click",function(){"Night"!=localStorage.toggled?($("body").toggleClass("Night",!0),localStorage.toggled="Night",$(".section-center").css("display","block")):($("body").toggleClass("Night",!1),localStorage.toggled="",$(".section-center").css("display",""))}),$("body").hasClass("Night")?$("#modedark").prop("checked",!0):$("#modedark").prop("checked",!1)});
+//]]>
+</script>
 
     
     </script>
